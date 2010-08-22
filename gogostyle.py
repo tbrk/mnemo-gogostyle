@@ -62,7 +62,7 @@ class Gogostyle(Plugin):
 		version + ")")
 
     def load(self):
-	self.format_mnemosyne = True # XXX
+	self.format_mnemosyne = False
 	self.format_mnemogogo = True
 
 	try: self.gogostyles = get_config("gogostyles")
