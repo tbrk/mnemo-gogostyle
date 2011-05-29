@@ -1,7 +1,7 @@
 ##############################################################################
 #
 # gogostyle.py
-# Timothy Bourke <timbob@bigpond.com>
+# Timothy Bourke <tim@tbrk.org>
 #
 # Plugin for applying regular expression substitutions during Mnemogogo
 # export.
@@ -46,7 +46,7 @@ name = "gogostyle"
 version = "1.1.0"
 
 # conversions should not overlap.
-# please email timbob@bigpond.com if there are errors in this default table,
+# please email tim@tbrk.org if there are errors in this default table,
 # or if you would like something else added.
 # NB: you can add personal stylings in config.py
 default_styles = [
