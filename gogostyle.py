@@ -30,13 +30,20 @@
 #
 # Replace the unicode range on the left and the class name on the right.
 #
+# History
+# -------
+# version 1.0.0
+#   * initial release
+# Version 1.1
+#   * added cjk punctuation, thanks to Nils von Barth
+#
 ##############################################################################
 
 from mnemosyne.core import *
 import re
 
 name = "gogostyle"
-version = "1.0.0"
+version = "1.1.0"
 
 # conversions should not overlap.
 # please email timbob@bigpond.com if there are errors in this default table,
@@ -51,6 +58,7 @@ default_styles = [
 	(ur'([\u3040-\u309F]+)', r'<span class="hiragana">\1</span>'),
 	(ur'([\u30A0-\u30FF]+)', r'<span class="katakana">\1</span>'),
 	(ur'([\u4E00-\u9FFF]+)', r'<span class="cjk">\1</span>'),
+	(ur'([\u3000-\u303F]+)', r'<span class="cjk">\1</span>'), # cjk punctuation
 	(ur'([\u1100-\u11FF]+)', r'<span class="hangul">\1</span>'),
 	(ur'([\uAC00-\uD7AF]+)', r'<span class="hangul">\1</span>'),
     ]
