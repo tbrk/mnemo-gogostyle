@@ -38,6 +38,9 @@
 #   * added cjk punctuation, thanks to Nils von Barth
 # Version 1.1
 #   * added cjk full and half-width forms, thanks to Nils von Barth
+# Version 1.2
+#   * Fix a bug that causes the config file to grow at each initialisation.
+#     Thanks to Nils von Barth for noticing and diagnosing this problem.
 #
 ##############################################################################
 
@@ -45,7 +48,7 @@ from mnemosyne.core import *
 import re
 
 name = "gogostyle"
-version = "1.1.0"
+version = "1.2.0"
 
 # conversions should not overlap.
 # please email tim@tbrk.org if there are errors in this default table,
@@ -76,7 +79,7 @@ class Gogostyle(Plugin):
 	self.format_mnemosyne = False
 	self.format_mnemogogo = True
 
-	try: self.gogostyles = get_config("gogostyles")
+	try: self.gogostyles = list(get_config("gogostyles"))
 	except KeyError:
 	    self.gogostyles = []
 	    set_config("gogostyles", [])
