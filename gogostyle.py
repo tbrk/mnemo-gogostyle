@@ -36,6 +36,8 @@
 #   * initial release
 # Version 1.1
 #   * added cjk punctuation, thanks to Nils von Barth
+# Version 1.1
+#   * added cjk full and half-width forms, thanks to Nils von Barth
 #
 ##############################################################################
 
@@ -59,6 +61,7 @@ default_styles = [
 	(ur'([\u30A0-\u30FF]+)', r'<span class="katakana">\1</span>'),
 	(ur'([\u4E00-\u9FFF]+)', r'<span class="cjk">\1</span>'),
 	(ur'([\u3000-\u303F]+)', r'<span class="cjk">\1</span>'), # cjk punctuation
+	(ur'([\uFF00-\uFFEF]+)', r'<span class="cjk">\1</span>'), # cjk full and half-width forms
 	(ur'([\u1100-\u11FF]+)', r'<span class="hangul">\1</span>'),
 	(ur'([\uAC00-\uD7AF]+)', r'<span class="hangul">\1</span>'),
     ]
