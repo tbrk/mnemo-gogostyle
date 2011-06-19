@@ -34,11 +34,11 @@
 # -------
 # version 1.0.0
 #   * initial release
-# Version 1.1
+# Version 1.1.0
 #   * added cjk punctuation, thanks to Nils von Barth
-# Version 1.1
+# Version 1.1.1
 #   * added cjk full and half-width forms, thanks to Nils von Barth
-# Version 1.2
+# Version 1.1.2
 #   * Fix a bug that causes the config file to grow at each initialisation.
 #     Thanks to Nils von Barth for noticing and diagnosing this problem.
 #
